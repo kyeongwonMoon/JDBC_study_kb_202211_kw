@@ -16,7 +16,7 @@ public class jdbcDelete {
 		int id = scanner.nextInt();
 		
 		Connection con = DBConnection.getInstance().getConnection();
-		String sql = "delete user_mst where id = `?`";
+		String sql = "delete from user_mst where id = ?";
 		
 		try {
 			PreparedStatement pstmt = con.prepareStatement(sql);
